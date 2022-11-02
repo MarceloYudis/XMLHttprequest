@@ -13,10 +13,10 @@ function anotherFunction(apiUrl) {
         const product = value[0].id;
 
         fatherGenerator(`${apiUrl}/products/${product}`).next().then( ({value, done}) => {
-            console.log(value.title)
+            console.log(value.title);
             const categorY = value.category.id;
 
-            fatherGenerator(`${apiUrl}/categories/${categorY}`).next().then( (value,done)=>{
+            fatherGenerator(`${apiUrl}/categories/${categorY}`).next().then( ({value,done})=>{
                 console.log(value.name)
             })
         })
