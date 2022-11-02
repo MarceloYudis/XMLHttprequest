@@ -16,7 +16,7 @@ function anotherFunction(apiUrl) {
             console.log(value.title)
             const categorY = value.category.id;
 
-            fatherGenerator(`${urlApi}/categories/${categorY}`).next().then( (value,done)=>{
+            fatherGenerator(`${apiUrl}/categories/${categorY}`).next().then( (value,done)=>{
                 console.log(value.name)
             })
         })
